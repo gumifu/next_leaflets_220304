@@ -7,6 +7,7 @@ import {
     HeartIcon,
     PaperAirplaneIcon,
 } from '@heroicons/react/outline';
+import Image from 'next/image';
 
 const Post = ({id,username,userImg,img,caption}) => {
   return (
@@ -19,7 +20,7 @@ const Post = ({id,username,userImg,img,caption}) => {
           </div>
 
           {/* img */}
-          <img src={img} className='object-cover w-full'/>
+          <img src={img} className='object-cover w-full' layout='fill'/>
 
           {/* Button */}
           <div className=' flex justify-between px-4 pt-4'>
