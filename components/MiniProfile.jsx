@@ -1,18 +1,20 @@
-import Image from 'next/image'
-import React from 'react'
+// import Image from 'next/image'
+import { signOut, useSession } from "next-auth/react";
 
 const MiniProfile = () => {
+    const { data: session } = useSession();
+    console.log(session);
     return (
         <div className='flex items-center justify-between mt-14 ml-10'>
             <div>
-                <img src='https://lookyourbestbeyourbest.files.wordpress.com/2011/11/image-3.jpeg'
+                <img src={session.user.image}
                                 alt='dummy profile' className=' h-16 w-16 object-cover rounded-full cursor-pointer border p-[2px]' layout='fill' />
             </div>
             <div className='flex-1 mx-4'>
-                        <h2 className='font-bold'>fujisaki</h2>
+                <h2 className='font-bold'>{session?.user?.name}</h2>
                         <h3 className='text-sm text-gray-400'>Welcome to leaflets</h3>
             </div>
-            <button className='text-blue-400 text-sm font-semibold'>サインアウト</button>
+            <button onClick={signOut} className='text-blue-400 text-sm font-semibold'>サインアウト</button>
         </div>
   )
 }

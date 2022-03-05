@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Flyers from '../components/Flyers'
 import Header from '../components/Header'
+import Modal from '../components/Modal'
 
 
 export default function Home() {
@@ -13,7 +14,11 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Flyers/>
+      {/* Main */}
+      <Flyers />
+      {/* Modal */}
+      <Modal/>
+
        {/*<main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
