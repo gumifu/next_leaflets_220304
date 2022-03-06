@@ -27,7 +27,7 @@ const Header = () => {
 
                 {/* left */}
                 <div onClick={()=>router.push('/')} className='relative hidden lg:inline-grid w-24'>
-                    <Image src="/logo-main.svg" alt="Vercel Logo" layout='fill' objectFit='contain' />
+                    <Image src="/logo-type.svg" alt="Vercel Logo" layout='fill' objectFit='contain' />
                 </div>
                 <div onClick={()=>router.push('/')} className='relative lg:hidden flex-shirink-0 w-10'>
                     <Image src="/logo-mark.svg" alt="Vercel Logo" layout='fill' objectFit='contain' />
